@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include<string.h>
+
+int main(void){
+
+    // Shopping Cart Program 
+
+    char fooditem[50]=""; // I put a limit of 50 characters 
+    float price; // float as the prices usually have decimal number in it 
+    int quantity;
+    char currency = '$';
+   
+
+
+    printf(" What can I get for you?\n");  // prompts the customer to state what they are getting while shopping
+    fgets(fooditem,sizeof(fooditem), stdin); // stores the user input in string
+    fooditem[strlen(fooditem)-1] ='\0'; // removes the new line character 
+
+    printf("The price for the %s \n " , fooditem); // The price for the food item is inserted by the user 
+    scanf("%f",&price);
+
+    printf("How many %s do you want\n ", fooditem); // quantity of the iterm 
+    scanf("%d", &quantity);
+
+    float Total= price* quantity;
+    printf("The total amount is %c %f\n", currency, Total); // The total is calculated and shown to the customer 
+
+
+
+return 0;
+}
