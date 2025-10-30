@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(void){
+int number;
+printf("Please enter a whole number \n ");
+
+
+scanf("%d", &number);
+
+printf("The number you entered is %d ", number);
+
+return 0;
+}
