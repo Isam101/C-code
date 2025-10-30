@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void){
+    double radius;
+    double Area;
+    const double Pi= 3.14159;
+    double Surface_Area_of_Sphere;
+    
+
+    printf("Enter the radius\n");
+    scanf("%lf", &radius);
+
+    Area = pow(radius,2) * Pi;
+
+    printf("The total Area: %lf \n", Area);
+    
+Surface_Area_of_Sphere= 4 *Pi* pow(radius,2);
+printf("The surface area of a Sphere is : %lf", Surface_Area_of_Sphere);
+
+    return 0;
+}
+
+
+
