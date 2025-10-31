@@ -10,13 +10,13 @@ int main(void){
 
     if(StudentisofAge == true){
 
-        printf("I am allowed to go to the student trip with my friends in school");
+        printf("I am allowed to go to the School trip with my friends");
 
     }
 
     else{
 
-    printf("You are not of age try again next year");
+    printf("You are not of age maybe next year");
     }
 
 
