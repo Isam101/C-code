@@ -1,0 +1,40 @@
+
+#include <stdio.h>
+#include <string.h>
+
+
+int main(void){
+
+    int WHATSTHEDAYOFTHEWEEK=0;
+    printf("What is the day of the Week the number one ressembles Monday and so on until Sunday which resembles 7 so please enter a Number between 1 and 7  :");
+    scanf("%d",&WHATSTHEDAYOFTHEWEEK);
+  switch(WHATSTHEDAYOFTHEWEEK){
+    case 1 :
+    printf(" The day of the week is Monday");
+    break;
+    case 2 :
+    printf(" The day of the week is Tuesday");
+    break;
+    case 3 :
+    printf(" The day of the week is Wednesday");
+    break;
+
+    case 4 :
+    printf(" The day of the week is Thursday");
+    break;
+    case 5 :
+    printf(" The day of the week is Friday");
+    break;
+    case 6 :
+    printf(" The day of the week is Saturday");
+    break;
+    case 7 :
+    printf(" The day of the week is Sunday");
+    break;
+    default :
+    printf("You have entered an invalid number ");
+  }
+
+  
+    return 0;
+}
