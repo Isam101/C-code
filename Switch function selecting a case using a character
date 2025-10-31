@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+
+int main(void){
+
+     char WHATSTHEDAYOFTHEWEEK = '\0';
+    printf("Please enter a letter for the day of the week  (M,T,W,R,F,Z,S) :\n");
+    scanf("%c",&WHATSTHEDAYOFTHEWEEK);
+
+  switch(WHATSTHEDAYOFTHEWEEK){
+    case 'M' :
+    printf(" The day of the week is Monday");
+    break;
+    case 'T' :
+    printf(" The day of the week is Tuesday");
+    break;
+    case 'w' :
+    printf(" The day of the week is Wednesday");
+    break;
+
+    case 'R':
+    printf(" The day of the week is Thursday");
+    break;
+    case 'F' :
+    printf(" The day of the week is Friday");
+    break;
+    case 'Z' :
+    printf(" The day of the week is Saturday");
+    break;
+    case 'S' :
+    printf(" The day of the week is Sunday");
+    break;
+    default :
+    printf("You have entered an invalid number ");
+  }
+
+  
+    return 0;
+}
+
+
