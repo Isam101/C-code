@@ -32,7 +32,7 @@ int main(void){
     printf(" The day of the week is Sunday");
     break;
     default :
-    printf("You have entered an invalid number ");
+    printf("You have entered an invalid character ");
   }
 
   
