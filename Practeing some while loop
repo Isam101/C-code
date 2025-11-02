@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <math.h>
+
+int main(){
+
+bool Runninggame=true;
+char Continue = '\0';
+
+while(Runninggame){
+
+    printf("DO you wanna continue playing the game Y= Yes or N= No\n");
+    scanf(" %c", &Continue);
+
+    if(Continue =='N'){
+        printf("Thanks for playing the game, the game has ended\n");
+        Runninggame=false;
+    }
+    else{
+
+    }
+
+}
+
+
+return 0;
+
+
+}
