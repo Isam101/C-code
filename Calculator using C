@@ -1,0 +1,64 @@
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <math.h>
+
+
+int main(){
+    double Number1=0.00;
+    double Number2=0.00;
+    double Result=0.00;
+    char Operator ='\0';
+
+    printf("Please enter the first number: \n");
+    scanf("%lf", &Number1);
+
+    printf("What action would you like to perform (*,/,+,-)\n" );
+    scanf(" %c",&Operator);
+
+    printf("Please enter the Second number: ");
+    scanf("%lf", &Number2);
+
+
+    switch (Operator)
+    {
+    case '+': 
+        Result = Number1+Number2;
+
+        printf ("The result of adding the two numbers %lf ", Result);
+
+        break;
+    case '-': 
+        Result = Number1-Number2;
+
+        printf ("The result of adding the two numbers %lf ", Result);
+
+        break;
+    case '*': 
+        Result = Number1*Number2;
+
+        printf ("The result of adding the two numbers %lf ", Result);
+
+        break;
+    case '/': 
+        if(Number2==0){
+            printf("Please enter a divisor which is not equal to zero");
+        }
+        else{
+        Result = Number1/Number2;
+
+        printf ("The result of adding the two numbers %lf ", Result);
+        }
+        break;
+    
+
+       
+   
+    default:
+        printf("Please enter a valid Operator");
+        break;
+    }
+  return 0;
+}
+
+
