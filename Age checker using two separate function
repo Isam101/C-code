@@ -1,0 +1,32 @@
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <math.h>
+
+bool agechecker(int age){
+
+    if(age >18){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+int main(){
+int age=30;
+
+agechecker(age);
+if(agechecker(age)){
+
+    printf("You are over the age of 18 years old and can sign up");
+
+}
+else{
+    printf("You are not of the age required to sign up");
+}
+
+return 0;
+
+
+}
