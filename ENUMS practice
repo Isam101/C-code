@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+typedef enum { // A user defined data type that consists of a set of named integer constants allows us to replace integers with readable names
+SUCCESS, FAILURE, PENDING
+
+}STATUS; // you can use type def followed by enum this simplifies complex and improves readability  also we will not have to write enum again in main function
+
+void connectstatus(STATUS status); // function protype 
+int main(){
+ STATUS status = SUCCESS;
+    connectstatus(status);
+
+    return 0;
+}
+void connectstatus(STATUS status){ // A reusable section of code that can be invoked"CALLED". Arguments can be sent to a function so that it can use them.
+    switch(status){
+
+        case FAILURE:
+        printf("You have failed the assesement ");
+        break;
+
+        case SUCCESS:
+        printf("You have passed the assesemnet ");
+        break;
+        case PENDING:
+        printf("Your assesement is still pending wait for ");
+        break;
+
+
+    };
+
+};
