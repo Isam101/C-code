@@ -1,0 +1,13 @@
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(){
+int numbers[3][4]= {{1,2,3,4}, //How array indexing works (array[row][column])
+                     {5,6,7,8},
+                    {9,10,11,12}};
+
+    printf("%d" ,numbers[0][0]); // Calling a specific number in the 2d array the first [0] calls which set and then the second [0] calls the first number in the set 
+
+    return 0;
+}
