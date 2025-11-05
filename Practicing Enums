@@ -1,0 +1,21 @@
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+enum DAY{ // A user defined data type that consists of a set of named integer constants allows us to replace integers with readable names
+
+SUNDAY, MONDAY, TUESDAY,WEDNESDAY, FRIDAY, SATURDAY
+
+};
+
+int main(){
+
+    enum DAY today= SUNDAY;  // I have went ahead and changed sunday as a readable number for 0 
+
+    printf("%d", today); // calling the day to demonstrate the number associated with it 
+
+
+
+    return 0;
+}
