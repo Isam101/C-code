@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+typedef struct 
+{
+    int age;  // A struct allows you to group related data into one organized object, making your code cleaner, scalable, and easier to manage.
+    float GPA;
+    char name[50];
+} Students;
+
+int main(){
+    Students student={27,3.9,"ISAMELDIN" }; // adding values to the data thats in struct
+
+    printf ("My age is  %d\n",student.age); // printing the values that where stored in struct 
+    printf("My GPA is %0.2lf\n", student.GPA);
+    printf("My name is %s\n", student.name );
+
+return 0;
+}
