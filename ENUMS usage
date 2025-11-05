@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+typedef enum { // A user defined data type that consists of a set of named integer constants allows us to replace integers with readable names
+
+SUNDAY, MONDAY, TUESDAY,WEDNESDAY, FRIDAY, SATURDAY
+
+}DAY; // you can use type def followed by enum this simplifies complex and improves readability  also we will not have to write enum again in main function
+
+int main(){
+
+    DAY today= SUNDAY;  // I have went ahead and changed sunday as a readable number for 0 
+
+    printf("%d", today); // calling the day to demonstrate the number associated with it 
+
+if(today==SUNDAY || today== SATURDAY ) { // BASICALLY USING IF STATEMENTS TO DEMONSTRATE THE CHANGE AND HOW ITS MORE READABLE NOW
+                                        // CODE CHECKING IF ITS THE WEEKEND OR NOT
+printf(" ITS THE WEEKEND"); 
+
+}
+else {
+printf("Its not the weekend :( ");
+};
+    return 0;
+}
