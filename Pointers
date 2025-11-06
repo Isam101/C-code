@@ -1,0 +1,14 @@
+
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+int main(){
+    int x=10; // Data type integer x variable has a value 10 stored 
+    int *ptr=&x; // &x gives the location where the x value is stored
+                // ptr stores the location // *ptr gets the value stored at address(10)
+
+    printf("%d",*ptr);
+return 0;
+}
