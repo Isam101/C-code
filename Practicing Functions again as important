@@ -1,0 +1,19 @@
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+void Happybirthday(int age){
+    printf("Happy birthday my queen");      // This program uses the idea of functions , the return type here is just void as you are not returning anything to the main function 
+    // Instead you are printing something
+    printf("How old are you again ? %d", age);
+}
+int main(){
+    
+    int age=25 ;
+    Happybirthday(age); // You are calling the function which then has the age integer passed into it and sent to the Happybirthday function
+     // age is already given a data type in the main function which is int so need to redefine it when calling the happy birthday function is called
+     // But in the Happy birthday function we need to add the int age as the function doesn't know whats its recieving so we define the data type and the variable
+
+return 0;
+}
