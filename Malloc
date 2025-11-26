@@ -1,1 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
+// malloc() = Dynamically allocates memory on the heap.
+// This program allows the user to enter any number of grades,
+// stores them in dynamically allocated memory, prints them,
+// and then frees the memory properly.
+
+int main() {
+    int number = 0;
+
+    // Ask the user how many grades they want to store
+    printf("Please enter the number of grades that will be entered: ");
+    scanf("%d", &number);
+
+    // Dynamically allocate memory for `number` grades
+    // sizeof(char) = 1 byte, so this allocates `number` bytes
+    char *grades = malloc(number * sizeof(char));
+
+    // Always check if malloc succeeded
+    if (grades == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1;
+    }
+
+    // Collect the grades from the user
+    for (int i = 0; i < number; i++) {
+        printf("Enter grade #%d: ", i + 1);
+        scanf(" %c", &grades[i]);  // Leading space ignores leftover whitespace/newlines
+    }
+
+    // Print the grades
+    printf("\nGrades entered: ");
+    for (int i = 0; i < number; i++) {
+        printf("%c ", grades[i]);
+    }
+    printf("\n");
+
+    // Free dynamically allocated memory
+    free(grades);      // Returns the memory to the OS
+    grades = NULL;     // Prevents dangling pointer bugs
+
+    return 0;
+}
