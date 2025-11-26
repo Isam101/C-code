@@ -1,1 +1,33 @@
-Process
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+// This program demonstrates how to write text to a file in C.
+// It opens a file, writes a string into it, checks for errors, and then closes the file.
+
+int main() {
+
+    // Open (or create) a file named "output.txt" in write mode ("w")
+    // fopen returns a FILE pointer, or NULL if the file couldn't be opened.
+    FILE *pFile = fopen("output.txt", "w");
+
+    // A simple string that will be written into the file
+    char NAME[] = "My Name is Isam ";
+
+    // Check if the file pointer is NULL (meaning the file couldn't be opened)
+    if (pFile == NULL) {
+        printf("The file was not able to be opened.\n");
+        return 1; // Exit the program early to avoid using a NULL pointer
+    }
+
+    // Write the string stored in NAME into the file using fprintf
+    fprintf(pFile, "%s", NAME);
+
+    // Notify the user that the write operation was successful
+    printf("File was written successfully.\n");
+
+    // Always close the file to free resources and ensure data is saved
+    fclose(pFile);
+
+    return 0;
+}
