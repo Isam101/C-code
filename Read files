@@ -1,1 +1,30 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
 
+// Read a file and print its contents line-by-line
+int main() {
+
+    // Open the file in read mode ("r")
+    // NOTE: Windows file paths require double backslashes (\\)
+    FILE *pFile = fopen("C:\\Users\\isamy\\OneDrive\\Desktop\\Input.txt", "r");
+
+    // Create a buffer to store each line read from the file
+    char buffer[1024] = {0};
+
+    // Check if the file failed to open
+    if (pFile == NULL) {
+        printf("The file was not able to be opened.\n");
+        return 1; // Exit program due to error
+    }
+
+    // Read each line from the file until EOF (End of File)
+    while (fgets(buffer, sizeof(buffer), pFile) != NULL) {
+        printf("%s", buffer); // Print the line
+    }
+
+    // Close the file after reading
+    fclose(pFile);
+
+    return 0;
+}
