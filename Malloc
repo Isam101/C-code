@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+# NICE iDDEA
 // malloc() = Dynamically allocates memory on the heap.
 // This program allows the user to enter any number of grades,
 // stores them in dynamically allocated memory, prints them,
